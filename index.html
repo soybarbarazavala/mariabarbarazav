@@ -1,41 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Flyer Noir</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOCHE NOIR - Flyer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+            color: white;
+            font-family: serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-<style>
-body {
-  margin: 0;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  color: white;
-  font-family: serif;
-}
+        /* === TAMAÑO PARA FLYER (recomendado para imprimir) === */
+        .flyer {
+            width: 148.5mm;     /* Ancho de A5 (mitad de A4) */
+            height: 210mm;      /* Alto de A5 */
+            border: 2px solid white;
+            padding: 20mm 15mm;
+            box-sizing: border-box;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-.flyer {
-  border: 2px solid white;
-  padding: 40px;
-  text-align: center;
-}
+        /* === TAMAÑO PARA HISTORIA DE INSTAGRAM (1080x1920) === */
+        /* Si prefieres este formato, comenta las líneas de .flyer y descomenta las de abajo */
+        /*
+        .flyer {
+            width: 1080px;
+            height: 1920px;
+            border: 2px solid white;
+            padding: 80px 60px;
+            box-sizing: border-box;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        */
 
-h1 {
-  font-size: 40px;
-  letter-spacing: 3px;
-}
-</style>
+        h1 {
+            font-size: 48px;
+            letter-spacing: 4px;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 24px;
+            margin: 15px 0;
+            line-height: 1.4;
+        }
+
+        a {
+            color: white;
+            text-decoration: underline;
+            font-size: 22px;
+        }
+
+        /* Estilos especiales para PDF / impresión */
+        @media print {
+            body { background: black; }
+            .flyer {
+                width: 148.5mm !important;
+                height: 210mm !important;
+                margin: 0 auto;
+                box-shadow: none;
+            }
+            @page {
+                size: A5 portrait;   /* Cambia a landscape si quieres horizontal */
+                margin: 0;
+            }
+        }
+    </style>
 </head>
-
 <body>
-
-<div class="flyer">
-  <h1>NOIR NIGHT</h1>
-  <p>Evento exclusivo</p>
-  <p>12 Abril · 9 PM</p>
-</div>
-
+    <div class="flyer">
+        <h1>NOCHE NOIR</h1>
+        <p>Evento exclusivo</p>
+        <p>12 de abril - 21:00</p>
+        <p>¡Solo para invitados!</p>
+        
+        <!-- Agrega aquí tus links -->
+        <p><a href="https://tu-link.com">Más información y boletos</a></p>
+    </div>
 </body>
 </html> 
